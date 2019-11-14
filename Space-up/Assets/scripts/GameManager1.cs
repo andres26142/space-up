@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
         GameOver,
         Countdown
     }
+
     int score = 0;
     bool gameOver = false;
 
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
+
     void SetPageState(PageState state)
     {
         switch (state)
