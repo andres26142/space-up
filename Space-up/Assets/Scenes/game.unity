@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 923663578}
   - component: {fileID: 923663580}
   - component: {fileID: 923663581}
+  - component: {fileID: 923663582}
   m_Layer: 0
   m_Name: ship
   m_TagString: Untagged
@@ -717,7 +718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923663577}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.3768921, y: -0.30660415, z: -67.32617}
+  m_LocalPosition: {x: -0.86, y: 0.04, z: -67.32617}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children: []
   m_Father: {fileID: 584112650}
@@ -760,6 +761,21 @@ CircleCollider2D:
   m_Offset: {x: 0.00000008940697, y: 0}
   serializedVersion: 2
   m_Radius: 2.16
+--- !u!114 &923663582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923663577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a381d6ef9f4249740b31b7ea592d1268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tapForce: 150
+  tiltSmooth: 5
+  startPos: {x: -0.86, y: 0.04, z: 0}
 --- !u!1 &1065657908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1380,7 @@ PrefabInstance:
     - target: {fileID: 2830082286107219193, guid: 201408239a7784a42bdc7ff0e340d44f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 2830082286107219193, guid: 201408239a7784a42bdc7ff0e340d44f,
         type: 3}
