@@ -54,6 +54,7 @@ public class PipeSpawner : MonoBehaviour
         }
         if (beginInScreenCenter)
             SpawnPipe();
+            
     }
 
     void Update()
@@ -62,7 +63,7 @@ public class PipeSpawner : MonoBehaviour
 
         targetAspect = (float)targetAspectRatio.x / targetAspectRatio.y;
         dynamicSpawnPos.x = (spawnPos.x * Camera.main.aspect) / targetAspect;
-
+        
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spawnRate)
         {

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public delegate void GameDelegate();
     public static event GameDelegate OnGameStarted;
     public static event GameDelegate OnGameOverConfirmed;
-
+    
     public static GameManager Instance;
 
     public GameObject startPage;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         GameOver
     }
 
-    int score = 0;
+    public int score = 0;
     bool gameOver = true;
 
     public bool GameOver { get { return gameOver; } }
@@ -65,12 +65,13 @@ public class GameManager : MonoBehaviour
         gameOver = false;
     }
 
-    void OnPlayerScored()
+    public void OnPlayerScored()
     {
         score++;
         scoreText.text = score.ToString();
+        
     }
-
+    
     void OnPlayerDied()
     {
         gameOver = true;

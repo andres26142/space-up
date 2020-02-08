@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Parallaxer : MonoBehaviour
 {
-
+    
     class PoolObject
     {
         public Transform transform;
@@ -70,8 +70,9 @@ public class Parallaxer : MonoBehaviour
     void Update()
     {
         if (game.GameOver) return;
-
+        
         Shift();
+        
         spawnTimer += Time.deltaTime;
         if (spawnTimer > spawnRate)
         {
@@ -79,7 +80,7 @@ public class Parallaxer : MonoBehaviour
             spawnTimer = 0;
         }
     }
-
+    
     void Configure()
     {
         //spawning pool objects
@@ -129,9 +130,11 @@ public class Parallaxer : MonoBehaviour
         //discarding them as they go off screen
         for (int i = 0; i < poolObjects.Length; i++)
         {
+            
             poolObjects[i].transform.position += Vector3.right * shiftSpeed * Time.deltaTime;
             CheckDisposeObject(poolObjects[i]);
         }
+        
     }
 
     void CheckDisposeObject(PoolObject poolObject)

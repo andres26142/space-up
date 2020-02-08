@@ -9,6 +9,7 @@ public class TapController : MonoBehaviour
     public delegate void PlayerDelegate();
     public static event PlayerDelegate OnPlayerDied;
     public static event PlayerDelegate OnPlayerScored;
+    
 
     public float tapForce = 10;
     public float tiltSmooth = 5;
