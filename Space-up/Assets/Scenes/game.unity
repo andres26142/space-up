@@ -1267,7 +1267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.46400002, y: 0.8366667}
   m_AnchorMax: {x: 0.53000003, y: 1}
-  m_AnchoredPosition: {x: -9.785, y: -1}
+  m_AnchoredPosition: {x: -9.78125, y: -1}
   m_SizeDelta: {x: 122.59, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065657910
@@ -1355,8 +1355,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1198828800}
   poolSize: 10
-  shiftSpeed: -1.9
-  spawnRate: 3
+  shiftSpeed: -2
+  spawnRate: 2
+  contScore: -1
   ySpawnRange:
     minY: -1.23
     maxY: 2.76
@@ -1913,6 +1914,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2830082286106784024, guid: 201408239a7784a42bdc7ff0e340d44f,
+        type: 3}
+      propertyPath: m_TagString
+      value: DeadZone
+      objectReference: {fileID: 0}
     - target: {fileID: 2830082286106784026, guid: 201408239a7784a42bdc7ff0e340d44f,
         type: 3}
       propertyPath: m_SortingOrder
@@ -1931,7 +1937,7 @@ PrefabInstance:
     - target: {fileID: 2830082286107219193, guid: 201408239a7784a42bdc7ff0e340d44f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.92
+      value: -9.31
       objectReference: {fileID: 0}
     - target: {fileID: 2830082286107219193, guid: 201408239a7784a42bdc7ff0e340d44f,
         type: 3}
@@ -1987,6 +1993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830082286985178246, guid: 201408239a7784a42bdc7ff0e340d44f,
+        type: 3}
+      propertyPath: m_TagString
+      value: DeadZone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 201408239a7784a42bdc7ff0e340d44f, type: 3}

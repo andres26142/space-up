@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using System;
 
 public class Parallaxer : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Parallaxer : MonoBehaviour
     public int poolSize;
     public float shiftSpeed;
     public float spawnRate;
+    public int contScore=-1;
 
     public YSpawnRange ySpawnRange;
     public Vector3 defaultSpawnPos;
@@ -69,6 +71,7 @@ public class Parallaxer : MonoBehaviour
 
     void Update()
     {
+        
         if (game.GameOver) return;
         
         Shift();
@@ -77,6 +80,13 @@ public class Parallaxer : MonoBehaviour
         if (spawnTimer > spawnRate)
         {
             Spawn();
+            contScore++;
+            if(contScore%10==0 && contScore!=0) {
+                shiftSpeed=shiftSpeed-0.1f;
+                spawnRate=spawnRate-0.1f;
+                Debug.Log(contScore);
+            }
+            
             spawnTimer = 0;
         }
     }
@@ -110,6 +120,8 @@ public class Parallaxer : MonoBehaviour
         pos.y = Random.Range(ySpawnRange.minY, ySpawnRange.maxY);
         pos.x = (defaultSpawnPos.x * Camera.main.aspect) / targetAspect;
         t.position = pos;
+
+        
     }
 
     void SpawnImmediate()
@@ -134,6 +146,7 @@ public class Parallaxer : MonoBehaviour
             poolObjects[i].transform.position += Vector3.right * shiftSpeed * Time.deltaTime;
             CheckDisposeObject(poolObjects[i]);
         }
+        
         
     }
 
