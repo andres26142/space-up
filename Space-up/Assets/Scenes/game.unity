@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5073243dc8500042ac3839c5701c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://cdn.eso.org/images/screen/potw2005a.jpg
+  url: https://cdn.eso.org/images/screen/potw2007a.jpg
   thisRenderer: {fileID: 1005408987}
 --- !u!1 &364908237
 GameObject:
@@ -1393,7 +1393,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
